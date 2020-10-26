@@ -1,0 +1,299 @@
+object F_Principal: TF_Principal
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 437
+  ClientWidth = 346
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ColorBox1: TColorBox
+    Align = Client
+    Color = claPalevioletred
+    Size.Width = 346.000000000000000000
+    Size.Height = 437.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+  end
+  object LayPrincipal: TLayout
+    Align = Client
+    Size.Width = 346.000000000000000000
+    Size.Height = 437.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object VertScrollBox1: TVertScrollBox
+      Align = Client
+      Size.Width = 346.000000000000000000
+      Size.Height = 437.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 346.000000000000000000
+      Viewport.Height = 437.000000000000000000
+      object LayEnderecos: TLayout
+        Align = Client
+        Size.Width = 346.000000000000000000
+        Size.Height = 389.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object layOrigem: TLayout
+          Align = Top
+          Size.Width = 346.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object layEnderecoOrigem: TLayout
+            Align = Client
+            Size.Width = 346.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object edtOrigem: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              TextSettings.Font.Family = 'Arial'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Margins.Left = 10.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Size.Width = 278.000000000000000000
+              Size.Height = 32.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Origem'
+              StyledSettings = []
+              Caret.Color = claYellowgreen
+            end
+            object btnLocalizacao: TButton
+              Align = Right
+              StyledSettings = [Family, Size, Style]
+              IconTintColor = claYellow
+              Images = ImageList1
+              ImageIndex = 0
+              Position.X = 298.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'trashtoolbutton'
+              TabOrder = 1
+              Text = 'btnLocalizacao'
+              TextSettings.FontColor = claCoral
+              TintColor = claYellowgreen
+              OnClick = btnLocalizacaoClick
+            end
+          end
+        end
+        object layDestino: TLayout
+          Align = Top
+          Position.Y = 48.000000000000000000
+          Size.Width = 346.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object layEnderecoDestino: TLayout
+            Align = Client
+            Size.Width = 346.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object btnIncluiDestino: TSpeedButton
+              Align = Right
+              StyledSettings = [Family, Size]
+              Margins.Right = 10.000000000000000000
+              Position.X = 288.000000000000000000
+              Position.Y = 9.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listitembutton'
+              Text = '+'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.FontColorForState.Normal = claWhite
+              TextSettings.FontColorForState.Hot = claRed
+              TintColor = claPalevioletred
+              OnClick = btnIncluiDestinoClick
+            end
+            object edtDestino1: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 1
+              Text = 'Imbu'#237', salvador'
+              TextSettings.Font.Family = 'Arial'
+              TextSettings.Font.Size = 14.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Margins.Left = 10.000000000000000000
+              Size.Width = 278.000000000000000000
+              Size.Height = 32.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Destino'
+              StyledSettings = []
+              Caret.Color = claYellowgreen
+            end
+          end
+        end
+        object ListViewDestinos: TListView
+          ItemAppearanceClassName = 'TImageListItemAppearance'
+          ItemEditAppearanceClassName = 'TImageListItemDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          AlternatingColors = True
+          Align = Client
+          Size.Width = 346.000000000000000000
+          Size.Height = 244.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+          StyleLookup = 'ListView1Style1'
+          AutoTapScroll = True
+        end
+        object layBotaoAvancar: TLayout
+          Align = Bottom
+          Position.Y = 340.000000000000000000
+          Size.Width = 346.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object btnAvancar: TSpeedButton
+            Align = Right
+            StyledSettings = [Family, Size]
+            IconTintColor = claWhite
+            Position.X = 298.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'searchtoolbutton'
+            Text = 'Pesquisar'
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            OnClick = btnAvancarClick
+          end
+        end
+      end
+      object ToolBar: TToolBar
+        Size.Width = 346.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        TintColor = claPalevioletred
+        object lblRotas: TLabel
+          Align = Client
+          StyledSettings = [Family]
+          HitTest = True
+          Size.Width = 346.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 22.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          Text = 'Rotas'
+          TabOrder = 1
+          OnClick = lblRotasClick
+        end
+      end
+    end
+  end
+  object LocationSensor: TLocationSensor
+    ActivityType = Other
+    UsageAuthorization = WhenInUse
+    Left = 200
+    Top = 224
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 64
+        MultiResBitmap.Width = 64
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 64
+            Height = 64
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+              DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              07D749444154785EDD9B598C144518807766E7D85996631510B9D115CFE04162
+              8C62244659C0EB81A089898872BC98F88086F862A2899C2A44E383627C300613
+              3C90A8111043880AFA6280A8040226B08810109163776676F6F0FBBB7F260CB3
+              335D5DD3D33BEB9754EAE8FAAFEAEAAAEE9E9E485DC8F4F6F626482D91486434
+              D566CABD94FF253B46FE07A9D3EDF93FA2A7A7E7E6EEEEEE655D5D5D3FB7B7B7
+              E724E8BE9063F4F989BEAF2173938A0F5C08E26102DAA9F1F906D91FD1315BD5
+              0D1CF0FD06CEE276378CCA41D7770CC464555FDBE0E802A672BBFA1E18A8BC40
+              365FCDD41E381721BD22CE561366C35B64A12FDE9EA863A180ADB56AB63660DA
+              2F55DF42039B4BD47CFF8223F796DBDAAA85D8C4F63DEA8635155D4B3890643A
+              EE8DC562D76B53A8B04D1EC4F6146E9E32DAE49BA8E6B6BCD05FC10BD8BE8EC9
+              F0BC56ADB09E01186ECA66B38793C9E495DA6444474747BAA1A1E1CB6834BA05
+              1D47A58D33388ED9343393C93CD6D8D8D8E07434041F4E25128949E86BD7A670
+              C0F9C5245F70B97C4AA0635545111C1B479FCFB5BB31C82D5415E121B7A96ADF
+              08025B41E639E3A40F69A5C8F860878A8703069B5985BB5DDBDEC8992733BEDC
+              A42F321B1D610374171AAAE2D58729F7A86BDA1B9CEB2837ED4B219703B26955
+              E309FD1F52515FD8EE02B768EE090BDE2616A83FB56A0C324765B1D4AA09C63E
+              5D8AD50030E0D768D11356F86D5AF40DB2DF6AD1137CBA568BBEB09D01C33437
+              E188E6BE61008C6599317E7CCA633B0009CD4D08E5C98D3520A9455FD80EC019
+              CD4D18AFB96F98D613B468C23F9AFBC26A00989A07B4E80941B46AD137C8CED4
+              A227F8B45F8BD587E9763FCE19215B996C692A6A0C3213FC6C83305D45AB0FC6
+              62DCB7FFEDDAF5466F6AFCDE086D72840DC097536431150F071CFCC0356F06FD
+              579119DD0AD377B5236408FDDF57F1F0608ACE52FBC6E0E8176425174599F6F4
+              313EF31741CE7A9DB1DEA2B01BCBE57287E2F1B89F955A1E87333CF27E85FC56
+              AA6D6E6BDD0416B1191C7BC4EFE3300F6587E5BD00F25DDA141E8CFC12E714F4
+              23F8D03F2F44048C0FCE66B36DDCB35BDD85550A8BDF196C8FE7EC5FD026DFD8
+              DE083970FB793E914884BF002904BFAE92E00381593082FDFAACCEC8D0C0E639
+              6C8F5437ACA9680608CC8253A9546A8D5643039BABB17D52ABD604F2A0C20969
+              EAECEC3CC8E5304A9BAA0AB64EB2FBB4C825A84DD6543C0304B90E71689956AB
+              0EB65E0D22F8406116C4D893F73A176815C1C66F6471355B5BB028C9CF643DAE
+              ABC1A3BAC37BE8B1815BD98F5D778307DD1FAA99DA8559305AB628F53930D2E9
+              F419745FA5666A1B1C7D4EFD0E92C5AABE76C0A9F104FB04E94E6D72A03DCA62
+              F5BDE37630EC20156CD962536CD36EFDCACD37181C417A9A6B7103CF007F39AE
+              01FBF261DA076B3707EA93B9143AB48B35A2035D2DAAD6416C894DEDD22BBE88
+              4FB4CF238DD06EC120C6488B38A33B71A6E4CF6138F08E8AE4A1F925F7A83DD8
+              7E51D5E5115B7AB808F1115FE5F3BA85E2BB8AF807617939B10E85F27596273A
+              38D354DC817A9424D3D70A0984AC5ED539509F56EE445C0AFDCE13C3BB14CD2F
+              1302BF02A1B711CEB86ACCC9E572FBC90A5E68A06F12BA7C3F2CA9CC4455E340
+              BD416DF842622126F988AB5955F50D1DA6736D1D75A47C82DC118C7C4DC077A9
+              BA3CB43DA3DD8C41669E8AE711DD62436C69375F20D7868EFB545D211C58C448
+              994E2DF9A67727CE2C47AE9526CF1722F4DDE04A7B43DF8D2A5612BA35637B26
+              7D57E0CB2E7CEA72A5CB23FD905BA06A5C689FEBA5408ECBE8539C8F025F9FC5
+              08C835CB19709495813EC72CF50F47EE597CDC8CAF654FA40EC21C479082FC0E
+              7F5E8F15C1B17332CA142BDE6FB1F520FA4A3E2BC83198A5DDAD41D5447C5EE5
+              1517B6C6C8D45CA36D45706C1D9D02DD577530FB8463CBB55B20E0FB487496FC
+              FD8263AFD7B1AA1ED07A1E4647A6C893AA2750501F41F712EEED4FBBD69CFBFC
+              D3D246319017349783EEA788A9E8B2901DA58E0345DB1D23B35E65AB06661238
+              36459294B5B96A1053D153AAC42EDFD99DD07A1E56D55FC99A5476C0C3200F26
+              2679915200B11F9791D9ACF50210D84D567023321021F849C4B2C78DAA1062FF
+              46A6E25CB75A0C53244D2759B4C2FB042D20F07918BECB4E50F2277606678EB3
+              28D171ABDBD437AAE413D203AABF66C1C7A9C4F31E3E97DC0205FA6C2373175D
+              4662242BE23EF7507964E544780D3233A8FAFA21B31AE0478AD48A4F6B4D9F13
+              743D182EF2F96D87865128F9ACBEBEDEF81BFC0E482693BF442291DDD16854D6
+              8CDD94F79172DA2550D01F27C9DFE9EE20BF5D120BD9D4C6C6C694DBC31B62FC
+              81181FC7C713522FD877C500A3F9722693598A52ABAFAE18935C3C1E3FC180B4
+              61E4184DF28748F919BC9D5CFE20D94D2EEF0C73E4CEEF7A949B284B7043C8EB
+              C9E5D96210B9FCF43E9A7C2C7E8DE30C5F8D5F565F82E05726954AAD44FF3252
+              F99FD231D6C248ADE73A327AC0A8658821472C1F1193FF0F297520DE64469C54
+              7D0306F119DFDFF00ADCE8D6137DF27F5FF9326C360A67C562B1827774B5028B
+              DB412EBDCD4C7149DB499EFF43B6BAF796994126DF08DD4DF9561E6127736D16
+              BCBAAA365CD3DD8944E20001EF25D05D346DA17CC83D6A8ED5005C0E8320ABB0
+              7CAD7D1B8372238E8C65FAC9E23586C19185CB7641CD12E471029485F4E282BA
+              8F7C0FE977ECA4A55F250432005E3040F221C3509C1FC2A0C4C99BC813E483E4
+              3865D9213AC92F90CB9F1FCED17C96002BFEFDBF3C7575FF01A79D14E59D43C3
+              A50000000049454E44AE426082}
+            FileName = 'C:\Projetos\RotaMapa_palestra\location-mark.png'
+          end>
+        Name = 'location-mark'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'location-mark'
+            SourceRect.Right = 64.000000000000000000
+            SourceRect.Bottom = 64.000000000000000000
+          end>
+      end>
+    Left = 144
+    Top = 192
+  end
+end
