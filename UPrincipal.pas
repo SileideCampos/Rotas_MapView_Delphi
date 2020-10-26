@@ -147,7 +147,7 @@ begin
   if LocationPermissionGranted then
   begin
     LocationSensor.Active := True;
-    DM.KeyMaps := 'AIzaSyA0XH7fUYPZkjnbwX3cwG33TIKkVaNsiRU';
+    DM.KeyMaps := 'sua-chave-api-aqui';
   end;
 end;
 
